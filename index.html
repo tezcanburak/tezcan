@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Registration</title>
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="div1">
+
+            <h1>Agent Registration</h1>
+
+            <div class="divider"></div>
+                <div class="icon"></div><p>Personal Details</p>
+            <div class="divider"></div>
+
+            <h2>Profile Information</h2>
+
+        </div>
+
+            <div class="div2">
+                <div class="chart">
+                    <div class="diva">
+
+                        <label>Agency Name<span class="red">*</span><input type="text" name="agency-name" placeholder="Agency Name" maxlength="15" required></label>
+                        <label>Adress<span class="red">*</span><input type="text" name="adress" placeholder="Please Write Your Adress" required></label>
+                        <label>Toll-Free Number<span class="red">*</span><input type="number" name="toll-free" placeholder="Toll-Free Number" required></label>
+                        <label>Company Name<span class="red">*</span><input type="text" placeholder="Company Name" name="company-name" required></label>
+
+                    </div>
+
+                    <div class="divb">
+
+                        <label>Acency Type<span class="red">*</span>
+                            <select name="type" required>
+                            <option value="">Select Agent Type</option>
+                            <option value="0">User</option>
+                            <option value="1">Agent</option>
+                            </select>
+                        </label>
+
+                        <div class="city">
+
+                            <label>City<span class="red">*</span><input type="text" placeholder="City" name="city" required></input></label>
+                            <label>State<span class="red">*</span><input type="text" name="state" placeholder="State" required></label>
+
+                        </div>
+
+                        <label>Email ID<span class="red">*</span><input type="email" name="email" placeholder="Email ID" required></label>
+
+                        <div class="owned">
+
+                            <p> Office Space</p>
+                                <Label><input type="radio" name="office" value="Owned" class="office2" checked>Owned</Label>
+                                <label><input class="office2" type="radio" name="office" value="Rental">Rental</label>
+                            </label>
+
+                        </div>
+                    </div>
+
+                    <div class="divc">
+
+                        <label>Password<span class="red">*</span><input type="password" name="password" placeholder="Password" pattern="[a-z0-9]{8,15}" required></label>
+                        <label>Telephone Number<span class="red">*</span>
+                            <input type="number" name="phone" placeholder="Telephone Number" required></label>
+                        <label>Website<span class="red">*</span>
+                            <input type="text"  name="website" placeholder="Website URL" required>
+                        </label>
+                        <label>Company Logo<span class="red">*</span>
+                            <div class="divfile"><input type="file" class="file"></div></label>
+
+                    </div>
+                </div>
+            </div>
+
+            <p id="last-one">In order to process your registration, we ask you to provide the following information. Please note that all fields marked with an asterisk(*) are required.</p>
+
+            <div class="div3">
+                <input type="button" id="cancel" value="CANCEL">
+                <input type="button" id="continue" value="CONTINUE →">
+            </div>
+        
+    </div>
+</body>
+</html>

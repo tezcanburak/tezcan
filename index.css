@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+
+.red{
+    color: red;
+}
+
+body{ 
+    height: 100vh;
+    width: 100vh;
+    margin: auto;
+    display: flex;
+    background-color: #E6EBF1;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: fit-content;
+    height: fit-content;
+    background-color: white;
+    margin: 32px;
+    padding: 64px;
+    border-radius: 32px;
+}
+
+.div1{
+
+}
+
+.divider {
+    border-bottom: 1px solid #888989;
+    margin: 2px 0;
+  }
+
+  .chart{
+    overflow: auto;
+    display: flex;
+    text-align: left;    
+    float: left;
+    margin: auto;
+    position: relative;
+    padding: 8px;
+}
+
+.diva, .divb, .divc{
+    width: 33%;
+    padding: 8px;
+    justify-content: center;
+    min-width: 256px;
+}
+
+::placeholder{
+    padding: 4px;
+}
+
+.divfile{
+    padding: 8px;
+    background-color: #F5F6FA;
+
+}
+
+.file{
+}
+input[type=file]::file-selector-button{
+    background-color: white;
+    border: 0;
+    box-shadow: 4px 4px 4px 4px white;
+
+}
+
+label{
+    width: 100%;
+    float: left;
+    display: block;
+    color: #A0A0A1;
+    line-height: 150%;
+    align-items: center;
+
+}
+
+label input{
+    width: 100%;
+    line-height: 200%;
+    float:initial;
+}
+
+select{
+    width: 100%;
+    line-height: 150%;
+    align-items: center;
+ }
+
+.city{
+    display: inline-block;
+    align-items: center;
+    width: 100%;
+    border: 0;
+    padding: 0;
+}
+.city label{
+    width: 50%;
+    padding: 0px 4px;
+}
+
+.owned{
+    width: 100%;
+    text-align: left;
+    color: #A0A0A1;
+
+
+}
+.owned label{
+    padding: 8px;
+    display: flex;
+    width: 50%;
+    text-align: left;
+    background-color: #F5F6FA;
+    border-radius: 4px;
+    color: black;
+
+
+}
+.owned input{
+    width: 30%;
+}
+
+#last-one{
+    display: inline-block;
+    width: 100%;
+    color: #B6B9C8;
+    font-size: 50%;
+
+}
+
+.div3{
+    display: flex;
+    justify-content: right;
+    padding: 16px;
+}
+
+#cancel{
+    padding: 16px 32px;
+    margin-right: 32px;
+    background-color: #B6B9C8;
+    border-radius: 4px;
+    border: 0;
+    color: white;
+}
+
+#continue{
+    color: white;
+    background-color: #78BD86;
+    padding: 16px 32px;
+    margin-right: 2rem;
+    border-radius: 4px;
+    border: 0;
+}
+
+/* alttaki yazı C9CDCB */
+/* calender CFD4DC */
