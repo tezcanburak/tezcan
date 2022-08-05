@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                redd: '#FF0000',
+                body: '#E6EBF1',
+                filee: '#F5F6FA',
+                textt: '#A0A0A1',
+                cancel: '#B6B9C8',
+                continue: '#78BD86',
+                ownedbg: '#F5F6FA',
+                last: '#B6B9C8',
+                owned: '#A0A0A1',
+              },
+
+              fontFamily: {
+                'sans': 'poppins, sans-serif'
+              }
+            }
+          }
+        }
+      </script>
+    <title>Agent Registration</title>
+</head>
+<body class="bg-body">
+    <div class="container bg-white rounded-xl mx-auto mt-16 max-w-6xl">
+        <div>
+            <div class="text-2xl font-bold border-b-2">
+             <h1 class="p-4">Agent Registration</h1>
+            </div>
+            <div class="flex border-b-2">
+                <div class="w-6 ml-4 flex align-middle">
+                    <img src="img/430087_check_checkmark_circle_icon.svg" alt="check-icon" class="align-middle">
+                </div>
+                <p class="text-textt text-sm py-2 px-4">Personal Details</p>
+            </div>
+            <h2 class="font-bold p-4">Profile Information</h2>
+
+        </div>
+
+        <!-- Grid Cards -->
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 text-sm p-4">
+            <div class="max-w-xs">
+
+                <label class="block">Agency Name<span class="text-redd">*</span><input type="text" class="block mt-2 px-4 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="Agency Name" maxlength="15" required></label>
+                <label class="block mt-4">Adress<span class="text-redd">*</span><input type="text" class="block mt-2 px-4 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="Please Write Your Adress" required></label>
+                <label class="block mt-4">Toll-Free Number<span class="text-redd">*</span><input type="number" class="block mt-2 px-4 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="Toll-Free Number" required></label>
+                <label class="block mt-4">Company Name<span class="text-redd">*</span>
+                    <div>
+                        <div class="block grid grid-cols-2 flex mt-2 px-4 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 flex">
+                            <input type="text" placeholder="Company Name" class="m-0 flex justify-items-start" required> 
+                            <img src="img/216121_calender_icon.svg" alt="calender-icon" class="w-5 justify-self-end">
+                        </div>
+                    </div>
+                </label>
+
+            </div>
+
+            <div class="max-w-xs">
+                    
+                 <label class="block">Acency Type<span class="text-redd">*</span>
+                    <select class="block text-textt mt-2 px-4 py-2 mb-1 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" required>
+                    <option value="">Select Agent Type</option>
+                    <option value="0" class="text-black">User</option>
+                    <option value="1" class="text-black">Agent</option>
+                    </select>
+                </label>
+
+                <div class="grid grid-cols-2">
+
+                    <label class="mt-4 mr-4">City<span class="text-redd">*</span><input type="text" placeholder="City" class="text-textt mt-2 px-4 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" required></label>
+                    <label class="mt-4">State<span class="text-redd">*</span><input type="text" class="text-textt mt-2 px-4 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="State" required></label>
+
+                </div>
+
+                    <label class="block mt-4">Email ID<span class="text-redd">*</span><input type="email" class="block text-textt mt-2 px-4 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"placeholder="Email ID" required></label>
+                        
+                    <p class="mt-4"> Office Space</p>
+                    <div class="grid grid-cols-2 mt-2 px-4 py-2 bg-ownedbg border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1">
+                                <Label class="flex justify-start"><input type="radio" name="radio" class="mr-4" value="Owned" checked>Owned</Label>
+                                <label class="flex justify-start"><input type="radio" name="radio" class="mr-4" value="Rental">Rental</label>
+                        </label>
+
+                    </div>
+            </div>
+
+            <div class="max-w-xs justify-center>
+
+                <label class="block" >Password<span class="text-redd">*</span>
+                    <input type="password" class="block text-textt mt-2 px-4 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="Password" pattern="[a-z0-9]{8,15}" required >
+                </label>
+                <label class="block mt-4">Telephone Number<span class="text-redd">*</span>
+                    <input type="phone" placeholder="Telephone Number" class="block text-textt mt-2 px-4 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" required>
+                </label>
+                <label class="block mt-4">Website<span class="text-redd">*</span>
+                    <input type="text"  class="text-textt mt-2 px-4 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="Website URL" required>
+                </label>
+                <label class="block mt-4">Company Logo<span class="text-redd">*</span>
+                    <div class="bg-filee">
+                        <input type="file" class="block bg-ownedbg file:bg-white file:shadow file:border-0 file:rounded-md text-textt mt-2 px-4 py-2 bg-hite border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 text-owned">
+                    </div>
+                </label>
+
+            </div>
+        </div>
+
+            <p class="block text-xs p-4 text-last">In order to process your registration, we ask you to provide the following information. Please note that all fields marked with an asterisk(*) are required.</p>
+
+            <!-- Buttons -->
+
+            <div class="flex justify-end px-16 py-8">
+
+                <a href="#" class="px-8 py-4 mr-16 bg-cancel text-white rounded font-bold">CANCEL</a>
+                <a href="#" class="px-8 py-4 bg-continue text-white rounded font-bold">CONTINUE →</a>
+
+            </div>
+            
+    </div>
+</body>
+</html>
