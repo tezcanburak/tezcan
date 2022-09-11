@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                redd: '#FF0000',
+                body: '#E6EBF1',
+                filee: '#F5F6FA',
+                textt: '#A0A0A1',
+                cancel: '#B6B9C8',
+                continue: '#78BD86',
+                ownedbg: '#F5F6FA',
+                last: '#B6B9C8',
+                owned: '#A0A0A1',
+                cancelHover: '#9194A0',
+                continueHover: '#60976B',
+              },
+
+              fontFamily: {
+                'sans': 'RooneySans-Regular,Lucida Sans,Lucida Grande,Lucida Sans Unicode,Trebuchet MS,sans-serif'
+              }
+            }
+          }
+        }
+      </script>
+    <title>Agent Registration</title>
+</head>
+<body class="bg-body">
+<form>
+    <div id="container" class="container bg-white rounded-xl mx-auto mt-16 max-w-6xl">
+
+        <div class="align-middle">
+            <div class="text-2xl font-bold border-b-2">
+             <h1 class="p-4">Agent Registration</h1>
+            </div>
+            <div class="flex border-b-2">
+                <!-- Personal Details Button -->
+
+                <div id="imgPersonal" class="w-6 ml-4 flex item-center align-middle">
+                    <img src="img/430087_check_checkmark_circle_icon.svg" alt="check-icon" class="align-middle">
+                </div>
+
+                <button id="personalId" class="text-textt text-sm py-2 px-4 font-bold justify-start border-r-2" onclick="myFunctionPersonal()">Personal Details</button>
+
+                <!-- Organization Information Button -->
+
+                <div id="imgOrganization" class="w-6 ml-4 flex align-middle hidden">
+                    <img src="img/430087_check_checkmark_circle_icon.svg" alt="check-icon" class="align-middle">
+                </div>
+
+                <button id="organizationId" class="text-textt text-sm py-2 px-4 font-bold justify-start border-r-2" onclick="myFunctionOrganization()">Organization Information</button>
+
+            </div>
+
+        </div>
+
+        <!-- Personal Details -->
+
+        <div id="personalInfo">
+
+            <h2 class="font-bold p-4">Profile Information</h2>
+            
+            <!-- Grid Cards -->
+
+            <div class="grid justify-items-center items-center grid-cols-1 lg:grid-cols-3 text-sm p-4 align-middle">
+
+                <div class="max-w-xs block align-middle">
+
+                    <label class="block mt-4" >Agency Name<span class="text-redd">*</span><input id="agencyName" type="text" class="block mt-2 px-4 py-2 hover:bg-body active:bg-white bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="Agency Name" maxlength="15" required></label>
+                    <label class="block mt-4">Adress<span class="text-redd">*</span><input type="text"  id="adress" class="block mt-2 px-4 py-2 hover:bg-body active:bg-white bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="Please Write Your Adress" required></label>
+                    <label class="block mt-4">Toll-Free Number<span class="text-redd">*</span><input type="number" id="toolFree" class="block mt-2 px-4 py-2 hover:bg-body active:bg-white bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="Toll-Free Number" required></label>
+                    <label class="block mt-4">Company Name<span class="text-redd">*</span>
+                        <div>
+                            <div class="block grid grid-cols-2 flex mt-2 px-4 py-2 active:bg-white bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 flex hover:bg-body">
+                                <input type="text"  id="companyName" placeholder="Company Name" class="m-0 flex justify-items-start hover:bg-body active:bg-white" required> 
+                                <img src="img/216121_calender_icon.svg" alt="calender-icon" class="w-5 justify-self-end">
+                            </div>
+                        </div>
+                    </label>
+
+                </div>
+
+                <div class="max-w-xs block align-middle justify-center">
+                        
+                    <label class="block mt-4">Acency Type<span class="text-redd">*</span>
+                        <select id="agencyType" class="block text-textt mt-2 px-4 py-[9px] mb-1  hover:bg-body active:bg-white bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" required>
+                        <option value="">Select Agent Type</option>
+                        <option value="0" class="text-black">User</option>
+                        <option value="1" class="text-black">Agent</option>
+                        </select>
+                    </label>
+
+                    <div class="grid grid-cols-2">
+
+                        <label class="mt-4 mr-4">City<span class="text-redd">*</span><input type="text" id="city" placeholder="City" class="text-textt mt-2 px-4 py-2 hover:bg-body active:bg-white bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" required></label>
+                        <label class="mt-4">State<span class="text-redd">*</span><input type="text" id="state" class="text-textt mt-2 px-4 py-2 hover:bg-body active:bg-white bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="State" required></label>
+
+                    </div>
+
+                        <label class="block mt-4">Email ID<span class="text-redd">*</span><input type="email" id="email" class="block text-textt mt-2 px-4 py-2 hover:bg-body active:bg-white bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"placeholder="Email ID" required></label>
+                            
+                        <p class="mt-4"> Office Space</p>
+                        <div class="grid grid-cols-2 mt-2 px-4 py-2 bg-ownedbg border shadow-sm placeholder-slate-400 focus:outline-none block w-full rounded-md sm:text-sm focus:ring-1 hover:bg-white">
+                                    <Label class="flex justify-start align-middle"><input type="radio" name="radio" class="mr-4 align-middle" value="Owned" id="owned" onclick="styleChange()">Owned</Label>
+                                    <label class="flex justify-start"><input type="radio" name="radio" class="mr-4" id="rental" value="Rental" onclick="styleChange()">Rental</label>
+                            </label>
+
+                        </div>
+                </div>
+
+                <div class="max-w-xs block justify-center align-middle">
+
+                    <label class="block mt-4">Password<span class="text-redd">*</span>
+                        <input type="password" id="password" class="block text-textt mt-2 px-4 py-2 hover:bg-body active:bg-white bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="Password" pattern="[a-z0-9]{8,15}" required >
+                    </label>
+                    <label class="block mt-4">Telephone Number<span class="text-redd">*</span>
+                        <input type="phone" id="telephone" placeholder="Telephone Number" class="block text-textt mt-2 px-4 py-2 hover:bg-body active:bg-white bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" required>
+                    </label>
+                    <label class="block mt-4">Website<span class="text-redd">*</span>
+                        <input type="text"  id="website" class="text-textt mt-2 px-4 py-2 hover:bg-body active:bg-white bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="Website URL" required>
+                    </label>
+                    <label class="block mt-4 align-middle">Company Logo<span class="text-redd">*</span>
+                        <div class="bg-filee align-middle">
+                            <input type="file" class="block hover:bg-white align-middle bg-ownedbg file:bg-white file:shadow file:border-0 file:rounded-md text-textt mt-2 px-4 py-[7px] border shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 text-owned">
+                        </div>
+                    </label>
+
+                </div>
+
+            </div>
+
+                <p class="block text-xs p-4 text-last">In order to process your registration, we ask you to provide the following information. Please note that all fields marked with an asterisk(*) are required.</p>
+        </div>
+</form>
+
+        <!-- Organization Information -->
+<form>
+        <div id="organizationInfo" class="hidden">
+
+            <h2 class="font-bold p-4">Organization Information</h2>
+
+            <div class="grid items-center grid-cols-1 text-sm p-4 align-middle">
+                <label class="block mt-4">Organization Name<span class="text-redd">*</span><input type="text" id="organizationName" class="block mt-2 px-4 py-2 hover:bg-body active:bg-white bg-white border shadow-sm border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="Organization Name" required></label>
+                <label class="block mt-4">Tax Number<span class="text-redd">*</span><input type="number" id="taxNumber" class="block mt-2 px-4 py-2 hover:bg-body active:bg-white bg-white border shadow-sm border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="Tax Number" required></label>
+                <label class="block mt-4">Adress<span class="text-redd">*</span><input type="text" id="adressOrganization" class="block mt-2 px-4 py-2 hover:bg-body active:bg-white bg-white border shadow-sm border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="Adress" required></label> 
+                <label class="block mt-4">Phone Number<span class="text-redd">*</span><input type="tel" id="phoneNumber" class="block mt-2 px-4 py-2 hover:bg-body active:bg-white bg-white border shadow-sm border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="Phone Number" required></label>
+            </div>
+
+        </div>
+</form>
+
+        <!-- Buttons -->
+
+        <div class="flex justify-end px-16 py-8">
+
+            <button onclick="myFunctionCancel()" class="px-8 py-4 mr-16 bg-cancel text-white rounded font-bold dark:md:hover:bg-cancelHover">CANCEL</button>
+            <button onclick="myFunctionContinue()" class="px-8 py-4 bg-continue text-white rounded font-bold dark:md:hover:bg-continueHover" type="submit">CONTINUE →</button>
+
+        </div>   
+    </div>
+    <script>
+
+        console.log("Merhaba size nasıl yardımcı olabilirim?");
+
+        // Personal Info & Organization Information
+
+        function myFunctionPersonal() {
+
+            var x = document.getElementById("personalInfo");
+            var y = document.getElementById("organizationInfo");
+            var xz = document.getElementById("imgPersonal");
+            var yz = document.getElementById("imgOrganization");
+
+                x.style.display = "block";
+                y.style.display = "none";
+                xz.style.display = "flex";
+                yz.style.display = "none";
+
+        }
+
+        function myFunctionOrganization() {
+
+            var x = document.getElementById("personalInfo");
+            var y = document.getElementById("organizationInfo");
+            var xz = document.getElementById("imgPersonal");
+            var yz = document.getElementById("imgOrganization");
+
+                x.style.display = "none";
+                y.style.display = "block";
+                xz.style.display = "none";
+                yz.style.display = "flex";
+            
+        }
+
+        // Cancel Button
+
+        function myFunctionCancel() {
+
+            alert("About to Cancel!");
+            document.getElementById("container").style.backgroundColor = "red";
+            setTimeout( function () {
+
+                alert("Canceled!");
+
+                document.getElementById("container").style.backgroundColor = "white";
+
+                document.getElementById("agencyName").reset;
+                document.getElementById("adress").reset;
+                document.getElementById("toolFree").reset;
+                document.getElementById("companyName").reset;
+                document.getElementById("agencyType").reset;
+                document.getElementById("city").reset;
+                document.getElementById("state").reset;
+                document.getElementById("email").reset;
+                document.getElementById("owned").reset;
+                document.getElementById("rental").reset;
+                document.getElementById("password").reset;
+                document.getElementById("telephone").reset;
+                document.getElementById("website").reset;
+                document.getElementById("organizationName").reset;
+                document.getElementById("taxNumber").reset;
+                document.getElementById("adressOrganization").reset;
+                document.getElementById("phoneNumber").reset;
+
+            } , 2000 );
+
+        }
+
+        // Continue Button
+
+        function myFunctionContinue() {
+            
+            let name = document.getElementById("agencyName").value;
+            let adress = document.getElementById("adress").value;
+            let toolFree = document.getElementById("toolFree").value;
+            let companyName = document.getElementById("companyName").value;
+            let agencyType = document.getElementById("agencyType").value;
+            let city = document.getElementById("city").value;
+            let state = document.getElementById("state").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let telephone = document.getElementById("telephone").value;
+            let website = document.getElementById("website").value;
+            let organizationName = document.getElementById("organizationName").value;
+            let taxNumber = document.getElementById("taxNumber").value;
+            let adressOrganization = document.getElementById("adressOrganization").value;
+            let phoneNumber = document.getElementById("phoneNumber").value;
+            
+            console.log("Agency Name :", name);
+            console.log("Adress :", adress);
+            console.log("Tool-Free Number :", toolFree);
+            console.log("Company Name :", companyName);
+            console.log("Ageny Type :", agencyType);
+            console.log("City :", city);
+            console.log("State :", state);
+            console.log("Email :", email);  
+            console.log("Password :", password);
+            console.log("Telephone Number :", telephone);
+            console.log("Organization Name :", organizationName);
+            console.log("Tax Number :", taxNumber);
+            console.log("Adress :", adressOrganization);
+            console.log("Phone Number :", phoneNumber);
+
+        }
+
+        // Office Space
+
+        function styleChange(){
+
+            if (document.getElementById("owned").checked) {
+                console.log("Office Space : Owned");
+            }
+            else if (document.getElementById("rental").checked) {
+                console.log("Office Space : Rental");
+            }
+        }    
+
+    </script>
+</body>
+</html>
